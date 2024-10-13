@@ -9,7 +9,7 @@ class RestaurantController extends Controller
 {
     public function index(){
         $menu = Restaurant::all();
-        return view('restaurant.index', compact('restaurant'));
+        return view('restaurant.index', compact('menu'));
     }
 
     public function create(){

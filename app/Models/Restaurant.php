@@ -13,4 +13,6 @@ class Restaurant extends Model
         'name',
         'price',
     ];
+
+    protected $table = 'menu';
 }

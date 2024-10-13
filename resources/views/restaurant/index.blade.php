@@ -9,8 +9,8 @@
 <body>
     <h1>Menu of the restaurant</h1>
     <ul>
-        @foreach ($restaurant as $menu)
-            <li>{{ $menu->name }} {{ $menu->price }}</li>
+        @foreach ($menu as $res)
+            <li>{{ $res->name }} {{ $res->price }}</li>
         @endforeach
     </ul>
 </body>
