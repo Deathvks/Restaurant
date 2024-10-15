@@ -61,8 +61,12 @@
         form {
             display: inline;
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
         button.delete-button {
-            background-color: #ff4d4d;
+            background-color: #8b0000;
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -71,6 +75,16 @@
         }
         button.delete-button:hover {
             background-color: #e60000;
+        }
+        a.edit-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a.edit-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -81,11 +95,14 @@
             @foreach ($menu as $res)
                 <li>
                     {{ $res->name }} - ${{ $res->price }}
-                    <form action="{{ route('restaurant.destroy', $res->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="delete-button">Delete</button>
-                    </form>
+                    <div class="button-group">
+                        <a href="{{ route('restaurant.formEdit', $res->id) }}" class="edit-button">Edit</a>
+                        <form action="{{ route('restaurant.destroy', $res->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </div>
                 </li>
             @endforeach
         </ul>

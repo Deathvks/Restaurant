@@ -31,4 +31,19 @@ class RestaurantController extends Controller
 
         return redirect()->route('restaurant.index');
     }
+
+    public function edit($id){
+        $menu = Restaurant::findOrFail($id);
+        return view('menu.formEdit', compact('menu'));
+    }
+
+    public function update(Request $request, $id){
+        $menu = Restaurant::findOrFail($id);
+        $menu->name = $request->input('name');
+        $menu->price = $request->input('price');
+        $menu->save();
+        
+        return redirect()->route('restaurant.index');
+    }
+
 }
