@@ -10,7 +10,7 @@
     <h1>An app of restaurant</h1>
 
     <div class="container">
-        @yield('content');
+        @yield('content')
     </div>
 </body>
 </html>
