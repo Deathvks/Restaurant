@@ -1,183 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+body {
+    background-color: #3b1818;
+    overflow-x: hidden;
+}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+header {
+    position: fixed;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 6vh;
+    background-color: #8b0000;
+    border-radius: 15px;
+    z-index: 1000;
+    border: 1px solid black;
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+#full-screen-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/res1.jpg') no-repeat center center/cover;
+    border-bottom: 2px solid black;
+}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-    }
-    
-    body {
-        background-color: #3b1818;
-        overflow-x: hidden;
-    }
-    
+#section-one-background {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.more {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.more:hover {
+    background-color: #a81d1d;
+}
+
+.offer {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    color: #000000;
+}
+
+#header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.header-p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#section-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em auto;
+    width: 90vw;
+    border-radius: 15px;
+
+}
+
+#target {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#title {
+    color: #ffffff;
+    margin-bottom: 1.5em;
+}
+
+#titleMap {
+    color: #ffffff;
+    font-size: 23px;
+}
+
+.subTitleMap {
+    color: #ffffff;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.hamburguer {
+    width: 55vw;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px white;
+    margin: 1em 0;
+}
+
+.map {
+    width: 55vw;
+    border: 2px solid black;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px white;
+}
+
+#section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    margin-bottom: 5em;
+    width: 90vw;
+    border-radius: 15px;
+}
+
+.food {
+    box-shadow: 0 0 10px 5px white;
+    border-radius: 10px;
+    width: 55vw;
+    height: 35vh;
+    margin: 1em 0;
+}
+
+.our {
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    background-color: #8b0000;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+.eat {
+    color: #ffffff;
+    margin-bottom: 0.5em;
+}
+
+.copy {
+    color: #ffffff;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
     header {
-        position: fixed;
-        top: 1em;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
-        height: 6vh;
-        background-color: #8b0000;
-        border-radius: 15px;
-        z-index: 1000;
-        border: 1px solid black;
+        width: 50vw;
     }
-    
-    #full-screen-image {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background: url('../img/res1.jpg')
-        no-repeat center center/cover;
-    }
-    
-    #section-one-background{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-    }
-    
-    .more{
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #8b0000;
-        color: #ffffff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-    }
-    
-    .more:hover {
-        background-color: #a81d1d;
-    }
-    
-    .offer{
+
+    .offer {
         font-size: 30px;
-        margin-bottom: 0.5em;
-        color: #000000;
-    }
-    
-    #header-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
-    }
-    
-    .header-p {
-        font-weight: bold;
-        font-size: 20px;
     }
 
     #section-one {
         justify-content: space-around;
+        flex-direction: row;
         align-items: center;
-        margin: 10em auto;
-        display: flex;
-        width: 90vw;
         height: 43vh;
-        border-radius: 15px;
-    }
-
-    #title {
-        color: #ffffff;
-        margin-bottom: 1.5em;
-    }
-
-    #titleMap{
-        color: #ffffff;
-
-    }
-
-    .subTitleMap{
-        color: #ffffff;
-        margin-bottom: 1.5em;
-        font-weight: bold;
     }
 
     .hamburguer {
         width: 30vw;
-        height: 45vh;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 5px white;
+        height: 23vh;
     }
-    
+
     .map {
         width: 30vw;
-        border: 2px solid black;
-        height: 45vh;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 5px white;
+        height: 23vh;
+    }
+
+    .our {
+        margin-top: 3em;
+    }
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+
+    header {
+        width: 40vw;
+    }
+
+    .offer {
+        font-size: 30px;
+    }
+
+    #section-one {
+        justify-content: space-around;
+        margin: 10em auto;
+        height: 43vh;
+    }
+
+    .hamburguer {
+        width: 30vw;
+    }
+
+    .map {
+        width: 30vw;
+        height: 30vh;
     }
 
     #section-two {
         border: 2px solid black;
         justify-content: space-around;
-        align-items: center;
-        margin: 2em auto;
-        margin-bottom: 5em;
+        flex-direction: row;
         background-color: #8b0000;
-        display: flex;
-        width: 90vw;
-        height: 43vh;
-        border-radius: 15px;
+        height: 30vh;
     }
 
-    .food{
-        box-shadow: 0 0 10px 5px white;
-        border-radius: 10px;
-        width: 18vw;
+    .food {
+        width: 17vw;
+        height: 20vh;
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+
+    header {
+        width: 30vw;
+    }
+
+    .offer {
+        font-size: 30px;
+    }
+
+    #section-one {
+        justify-content: space-around;
+        margin: 10em auto;
+        height: 43vh;
+    }
+
+    .hamburguer {
+        width: 30vw;
         height: 35vh;
     }
 
-    .our{
-        display: flex;
-        color: #ffffff;
-        justify-content: center;
+    .map {
+        width: 30vw;
+        height: 35vh;
     }
 
-    footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 20vh;
+    #section-two {
+        border: 2px solid black;
+        justify-content: space-around;
         background-color: #8b0000;
-        border-top: 1px solid rgb(0, 0, 0);
+        height: 35vh;
     }
 
-    .eat{
-        color: #ffffff;
-        margin-bottom: 0.5em;
+    .food {
+        width: 18vw;
+        height: 25vh;
+    }
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+
+    header {
+        width: 20vw;
     }
 
-    .copy{
-        color: #ffffff;
+    .offer {
+        font-size: 30px;
+    }
+
+    #section-one {
+        justify-content: space-around;
+        margin: 10em auto;
+        height: 43vh;
+    }
+
+    .hamburguer {
+        width: 30vw;
+        height: 45vh;
+    }
+
+    .map {
+        width: 30vw;
+        height: 45vh;
+    }
+
+    #section-two {
+        border: 2px solid black;
+        justify-content: space-around;
+        background-color: #8b0000;
+        height: 43vh;
+    }
+
+
+
+    .food {
+        width: 18vw;
     }
 }
