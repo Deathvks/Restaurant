@@ -13,6 +13,12 @@
             margin: 0;
             padding: 0;
         }
+
+        a {
+            text-decoration: none;
+            color: #fff
+        }
+
         h1 {
             background-color: #8b0000;
             color: #fff;
@@ -22,7 +28,7 @@
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 12em auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
@@ -65,6 +71,29 @@
         a.back-link:hover {
             text-decoration: underline;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 20vh;
+            background-color: #8b0000;
+            border-top: 1px solid rgb(0, 0, 0);
+        }
+
+        .eat{
+            color: #ffffff;
+            margin-bottom: 0.5em;
+        }
+
+        .copy{
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -85,5 +114,9 @@
         </form>
         <a href="{{ route('restaurant.index') }}" class="back-link">No want edit? Back to the list</a>
     </div>
+    <footer>
+        <h1 class="eat">El placer de comer - <a href="{{route("restaurant.index")}}">Menú</a></h1>
+        <p class="copy">Copyright @2024 - Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>

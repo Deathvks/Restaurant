@@ -13,6 +13,12 @@
             margin: 0;
             padding: 0;
         }
+
+        a {
+            text-decoration: none;
+            color: #fff
+        }
+
         h1 {
             background-color: #8b0000;
             color: #fff;
@@ -22,7 +28,7 @@
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 5em auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
@@ -86,10 +92,32 @@
         a.edit-button:hover {
             background-color: #45a049;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 20vh;
+            background-color: #8b0000;
+            border-top: 1px solid rgb(0, 0, 0);
+        }
+
+        .eat{
+            color: #ffffff;
+        }
+
+        .copy{
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
-    <h1>Menu of the restaurant</h1>
+    <h1>Menu of the restaurant - <a href="{{route("welcome.index")}}">Home</a></h1>
     <div class="container">
         <ul>
             @foreach ($menu as $res)
